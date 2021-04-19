@@ -59,6 +59,13 @@
             <version>2.2.5.RELEASE</version>
         </dependency>-->
 
+        <!-- 引入sentinel-datasource-nacos,将nacos作为持久存储规则 -->
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-datasource-nacos</artifactId>
+            <version>1.5.2</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
