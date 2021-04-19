@@ -121,7 +121,7 @@ public class SentinelConfig {
     private void initFlowRule(String resource) {
         /* 以QPS作为流控规则,其每秒不得超过10次调用, */
         FlowRule qpsFlowRule = new FlowRule(resource)
-                .setCount(1)
+                .setCount(10)
                 .setGrade(RuleConstant.FLOW_GRADE_QPS)
                 .setStrategy(RuleConstant.STRATEGY_DIRECT)                   // default
                 .setControlBehavior(RuleConstant.CONTROL_BEHAVIOR_DEFAULT)   // default
