@@ -46,12 +46,11 @@ public class HttpController {
             , fallback = "fallForBack2", fallbackClass = FallbackHandler.class)
     public String hello(@PathVariable String id) {
         System.out.println("run into hello(String id) ...");
-/*
         try {
-            Thread.sleep(System.currentTimeMillis() % 500);
+            Thread.sleep(System.currentTimeMillis() % 300 + 200);
         } catch (InterruptedException e) {
-            e.printStackTrace();
-        }*/
+            //e.printStackTrace();
+        }
         return "Welcome Back! " + id;
     }
 }
