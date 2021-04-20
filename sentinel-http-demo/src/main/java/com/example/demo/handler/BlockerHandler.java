@@ -11,6 +11,6 @@ public class BlockerHandler {
         //return null;
         //blockException.printStackTrace();
         //return fallForBack2(id, blockException);
-        return "ok";
+        return "该服务已经被降级....";
     }
 }

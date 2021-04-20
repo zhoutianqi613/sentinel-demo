@@ -25,6 +25,12 @@ class DemoApplicationTests {
                 SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");//设置日期格式
                 System.out.println(String.format("[%s]response:%s", df.format(new Date()), forObject));
             });
+
+            try {
+                Thread.sleep(System.currentTimeMillis() %20 +20);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 

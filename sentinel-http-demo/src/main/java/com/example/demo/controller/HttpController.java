@@ -34,20 +34,20 @@ public class HttpController {
     public ApplicationContext applicationContext;
 
     @RequestMapping("/http/hello")
-    @SentinelResource(value = "hello", fallback = "fallForBack2", fallbackClass = FallbackHandler.class)
+    @SentinelResource(value = "/http/hello", fallback = "fallForBack2", fallbackClass = FallbackHandler.class)
     public String hello() {
         System.out.println("run into hello() ...");
         return "Welcome Back!";
     }
 
     @RequestMapping("/http/hello/{id}")
-    @SentinelResource(value = "hello1"
+    @SentinelResource(value = "/http/hello/{id}"
             , blockHandler = "defaultBlockerHandler", blockHandlerClass = BlockerHandler.class
             , fallback = "fallForBack2", fallbackClass = FallbackHandler.class)
     public String hello(@PathVariable String id) {
         System.out.println("run into hello(String id) ...");
         try {
-            Thread.sleep(System.currentTimeMillis() % 300 + 200);
+            Thread.sleep(System.currentTimeMillis() % 300 + 300);
         } catch (InterruptedException e) {
             //e.printStackTrace();
         }

@@ -7,6 +7,6 @@ public class FallbackHandler {
         System.out.println("run into fallForBack2() ...");
         //System.out.println(throwable.getMessage());
         //throwable.printStackTrace();
-        return "TestController::back(id)已经被限流...";
+        return "该服务已经被限流...";
     }
 }
