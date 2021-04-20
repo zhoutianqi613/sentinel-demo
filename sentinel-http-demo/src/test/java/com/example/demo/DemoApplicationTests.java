@@ -19,7 +19,7 @@ class DemoApplicationTests {
             final int ii = i;
             fixedThreadPool.execute(() -> {
                 RestTemplate restTemplate = new RestTemplate();
-                String url = "http://localhost:8081/http/hello/1";
+                String url = "http://localhost:8082/http/hello/1";
                 String forObject = restTemplate.getForObject(url, String.class);
                 System.currentTimeMillis();
                 SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");//设置日期格式
